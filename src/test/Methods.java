@@ -1,7 +1,6 @@
 package test;
 import help.HelperException;
 import java.util.Objects;
-import java.lang.String;
 
 public class Methods {
 	
