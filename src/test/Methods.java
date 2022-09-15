@@ -1,6 +1,7 @@
 package test;
 import help.HelperException;
 import java.util.Objects;
+import java.lang.String;
 
 public class Methods {
 	
@@ -115,15 +116,11 @@ public class Methods {
         nullCheck(spaceRemover);
         return spaceRemover.replace(" ", "");
     }
-    public String mergeStringWithChar(String[] baseString, char symbol) throws HelperException {
+    public String mergeStringWithChar(String[] baseString, String symbol) throws HelperException {
         nullCheck(baseString);
-        int length = baseString.length;
-        String finalString = "";
-        for (int i = 0; i < length; i++) {
-                finalString = finalString + baseString[i] + symbol;
-        }
-        int lastPosition=finalString.lastIndexOf(symbol);        
-        return finalString.substring(0,lastPosition);
+        String finalString="";
+        finalString=finalString.join(symbol,baseString);
+        return finalString;
     }
     public boolean checkStringEquals(String firstString, String secondString) throws HelperException {
         nullCheck(firstString);
