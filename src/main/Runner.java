@@ -155,7 +155,8 @@ public class Runner {
                             System.out.println("enter string"+i);
                             stringArray[i] = sc.next();
                         }
-                        finalString = t3.mergeStringWithChar(stringArray, getChar());
+                        char character=getChar();
+                        finalString = t3.mergeStringWithChar(stringArray, Character.toString(character));
                         System.out.println(finalString);
                         break;
                     }
