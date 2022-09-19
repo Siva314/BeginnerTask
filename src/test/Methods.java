@@ -98,14 +98,17 @@ public class Methods {
     }
     //reverse string
     public String reverseString(String baseString) throws HelperException {
-        int length = findStringLength(baseString);
-        String finalString = "";
-        char character;
-        for (int i = 0; i < length; i++) {
-            character = baseString.charAt(i);
-            finalString = character + finalString;
-        }
-        return finalString;
+    	char[] characterArray=convertStringToChar(baseString);
+    	int length=characterArray.length,j=length-1;
+    	for(int i=0;i<length/2;i++) {
+    		if(i<=j) {
+    			char temp=characterArray[i];
+    			characterArray[i]=characterArray[j];
+    			characterArray[j]=temp;
+    			j--;
+    		}
+    	}
+        return baseString.valueOf(characterArray);
     }
     public String[] splitString(String stringToSplit) throws HelperException {
         nullCheck(stringToSplit);
