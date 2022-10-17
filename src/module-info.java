@@ -1,2 +1,2 @@
-module task3 {
+module Inheritence {
 }
